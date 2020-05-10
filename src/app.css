@@ -1,0 +1,9 @@
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/aqua.css";
+
+Label{
+    font-size: 18;
+    color: lightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

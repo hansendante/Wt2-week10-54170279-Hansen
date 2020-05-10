@@ -1,0 +1,35 @@
+<ActionBar [title]="'Details of ' + name"></ActionBar>
+
+<GridLayout rows="auto, auto, auto, *" columns="*, *" *ngIf="pokemon">
+    <!-- row pertama menempati 2 kolom-->
+    <label text="Sprites" class = "h1" row = "0" col = "0" colSpan = "2"></label>
+    <!-- row kedua masing2 gambar menempati 1 kolom-->
+    <Image [src]="pokemon.sprites.front_default" row = "1" col = "0"></Image>
+    <Image [src]="pokemon.sprites.front_default" row = "1" col = "1"></Image>
+    <!-- row ketiga, menempati dua kolom-->
+    <Label text="Stats" class="h1" row="2" col="0" colSpan="2"></Label>
+    
+    <!-- row keempat-->
+    <GridLayout rows= "auto, auto, auto, auto, auto, auto, auto, auto" columns = "*, *" row = "3" col = "0" colSpan = "2">
+        <label text="Pokemon Name " class="font-weight-bold" row = "0" col = "0"></label>
+        <label [text]="pokemon.name" class="text-uppercase" row = "0" col = "1"></label>
+        <label text="Pokemon Type " class="font-weight-bold"row = "1" col = "0"></label>
+        <label [text]="pokemon.types[0].type.name + (pokemon.types[1] ? '/' + pokemon.types[1].type.name : '') "  row = "1" col = "1"></label>
+        <label text="Pokemon Skill 1 " class ="font-weight-bold" row="2" col="0"></label>
+        <label [text]="pokemon.abilities[0].ability.name " row="2" col = "1"></label>
+        <label text="Pokemon Skill 2 " class ="font-weight-bold" row="3" col="0"></label>
+        <label [text]="pokemon.abilities[1].ability.name " row="3" col = "1"></label>
+        <label text="Experience : " row = "4" col = "0" class="font-weight-bold"></label>
+        <label [text]="pokemon.base_experience " row ="4" col = "1" class="font-weight-bold" ></label>
+        <label text="HP : " row = "5" col = "0" class="font-weight-bold"></label>
+        <label [text]="pokemon.stats[5].base_stat " row ="5" col = "1" class="font-weight-bold" ></label>
+        <label text="Attack : " row = "6" col = "0" class="font-weight-bold"></label>
+        <label [text]="pokemon.stats[4].base_stat " row ="6" col = "1" class="font-weight-bold" ></label>
+        <label text="Defense : " row = "7" col = "0" class="font-weight-bold"></label>
+        <label [text]="pokemon.stats[3].base_stat " row ="7" col = "1" class="font-weight-bold" ></label>
+        
+        
+        
+    </GridLayout>
+
+</GridLayout>
